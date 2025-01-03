@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.container p:first-child {
+    background: orange;
+}
+
+.container p:first-of-type {
+    background: blue;
+}
+
+.container p:last-of-type {
+    background: lightblue;
+}
