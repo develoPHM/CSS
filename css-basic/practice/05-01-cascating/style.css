@@ -1,0 +1,16 @@
+* {
+    /*4순위*/
+    background: yellow;
+}
+div {
+    /*3순위*/
+    background: aqua;
+}
+.text-class {
+    /*2순위*/
+    background: blue;
+}
+#text-id {
+    /*1순위*/
+    background: red;
+}
