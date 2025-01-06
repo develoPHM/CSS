@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    /*상속o*/
+    color: blue;
+    font-size: 30px;
+    /*상속x*/
+    border: 4px solid orange;
+}
+
+.inner-box {
+    /*상속 받았지만 변경*/
+    color: violet;
+}

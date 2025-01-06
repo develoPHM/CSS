@@ -9,7 +9,7 @@
     border: 2px solid red;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    align-content: space-evenly;
 }
 
 .container div {
@@ -20,7 +20,7 @@
 }
 /*오더 값을 안준 박스들은 0이다*/
 .box4 {
-    order: 3;
+    order: 2;
 }
 .box5 {
     order: 1;
