@@ -1,0 +1,11 @@
+.btn {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    transition: width 0.3s ease-in-out;
+
+}
+.btn:hover {
+    width: 400px;
+}
