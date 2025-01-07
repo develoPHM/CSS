@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 28px;
+    color: white;
+    width: 100%;
+    height: 200px;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sidebar-list {
+    background: orange;
+    width: 200px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    padding-left: 25px;
+}
+
+.sidebar ul li {
+    color: white;
+    list-style: none;
+    margin: 8px;
+}
+
+.sidebar-add {
+    width: 200px;
+    height: 40px;
+    color: white;
+    background: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+.item-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item {
+    position: relative;
+    width: calc(25% - 7px);
+    /*가로 6 세로 5*/
+    aspect-ratio: 6 / 5;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+.img-box {
+    width: 100%;
+    height: 100%;
+}
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 3;
+}
+.text-box p {
+    color: white;
+    margin: 5px 0 0;
+}
+.text__name {
+    font-size: 22px;
+    font-weight: 500;
+    opacity: 0;
+}
+.text__price {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+}
+
+.item:after {
+    content: "";
+    display: block;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+.item:hover:after {
+    opacity: 1;
+}
+.item:hover .text__name {
+    opacity: 1;
+}
+.item:hover .text__price {
+    opacity: 1;
+}
+.item:hover .img-box img {
+    transform: scale(1.1);
+    filter: blur(3px);
+}
+
+.item:after,
+.item .img-box img,
+.item .text__name,
+.item .text__price {
+    transition: all 0.4s ease-in-out;
+}
